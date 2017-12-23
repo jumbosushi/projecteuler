@@ -5,16 +5,16 @@ class ModulosSum
     @base = base
   end
 
-  def getSum
+  def get_sum
     puts "Sum of #{@base}"
-    mods = getModulos()
+    mods = get_modulos()
     return mods.sum
   end
 
-  def getModulos
+  def get_modulos
     mods = []
     (1..@base-1).each do |i|
-      if isMod(i, 3) || isMod(i, 5)
+      if is_mod(i, 3) || is_mod(i, 5)
         mods.push(i)
       end
     end
@@ -22,16 +22,16 @@ class ModulosSum
     return mods
   end
 
-  def isMod(target, num)
+  def is_mod(target, num)
     return target % num == 0
   end
 end
 
 obj = ModulosSum.new(10)
-puts obj.getSum()
+puts obj.get_sum()
 
 obj = ModulosSum.new(100)
-puts obj.getSum()
+puts obj.get_sum()
 
 obj = ModulosSum.new(1000)
-puts obj.getSum()
+puts obj.get_sum()
